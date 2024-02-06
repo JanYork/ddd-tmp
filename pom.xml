@@ -1,0 +1,166 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>net.zhaixing.blog</groupId>
+    <artifactId>blog-user</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0.0</version>
+
+    <modules>
+        <module>user-api</module>
+        <module>user-common</module>
+        <module>user-application</module>
+        <module>user-domain</module>
+        <module>user-infrastructure</module>
+        <module>user-interaction</module>
+        <module>user-rpc</module>
+        <module>user-start</module>
+    </modules>
+
+    <name>mumu-user</name>
+    <url>https://fhub.cn</url>
+    <description>用户服务模块使用领域驱动设计实现</description>
+
+    <properties>
+        <!--  项目版本  -->
+        <project.version>1.0.0</project.version>
+        <!--  项目编码  -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <!--  java版本  -->
+        <java.version>17</java.version>
+        <!--  lombok版本  -->
+        <lombok.version>1.18.30</lombok.version>
+        <!--    SpringBoot    -->
+        <spring-boot.version>3.0.2</spring-boot.version>
+        <!--    SpringCloudAlibaba    -->
+        <spring-cloud-alibaba.version>2022.0.0.0</spring-cloud-alibaba.version>
+        <!--    SpringCloud    -->
+        <spring-cloud.version>2022.0.0</spring-cloud.version>
+        <!--    MybatisPlus    -->
+        <mybatis-plus.version>3.5.5</mybatis-plus.version>
+        <!--    Druid    -->
+        <druid.version>1.2.20</druid.version>
+        <!--    Gson    -->
+        <gson.version>2.10.1</gson.version>
+        <!--    TTL    -->
+        <ttl.version>2.14.5</ttl.version>
+        <!--    Hutool    -->
+        <hutool.version>5.8.24</hutool.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
+        </dependency>
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+
+            <dependency>
+                <groupId>net.zhaixing.blog</groupId>
+                <artifactId>user-api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.zhaixing.blog</groupId>
+                <artifactId>user-common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.zhaixing.blog</groupId>
+                <artifactId>user-application</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.zhaixing.blog</groupId>
+                <artifactId>user-domain</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.zhaixing.blog</groupId>
+                <artifactId>user-infrastructure</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.zhaixing.blog</groupId>
+                <artifactId>user-interaction</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>net.zhaixing.blog</groupId>
+                <artifactId>user-rpc</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-extension</artifactId>
+                <version>${mybatis-plus.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>${ttl.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.google.code.gson</groupId>
+                <artifactId>gson</artifactId>
+                <version>${gson.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>
