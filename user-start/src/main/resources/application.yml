@@ -4,7 +4,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     username: root
-    password: 9.0Jianyuewuxian
+    password: 123456
     url: jdbc:mysql://127.0.0.1:3306/blog-user?autoReconnect=true&autoReconnectForPools=true&useUnicode=true&characterEncoding=utf8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
     driver-class-name: com.mysql.cj.jdbc.Driver
     druid:
